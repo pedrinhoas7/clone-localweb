@@ -20,6 +20,7 @@
 <script lang="ts">
 import api from '@/plugin/api';
 import { defineComponent } from 'vue';
+import vm from '@/views/MainViewModel'
 
 export default defineComponent({
   data() {
@@ -40,7 +41,8 @@ export default defineComponent({
 
         // se a autenticação foi bem-sucedida, redirecionar para a página inicial
         if (response.status === 200) {
-          this.$router.push('/');
+          vm.setUser({token: response.data.token, name: this.username})
+          this.$router.push('/watch');
         }
       } catch (error) {
         console.log(error)
@@ -54,6 +56,8 @@ export default defineComponent({
 
 <style>
 .container {
+  margin-left: 30%;
+  margin-top: 10%;
   width: 200px;
   display: inline-block;
   justify-content: center;
