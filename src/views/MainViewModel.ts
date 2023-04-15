@@ -4,18 +4,18 @@ interface User {
 }
 
 class MainViewModel {
-  users: User | null;
+  user: User | null;
 
   constructor() {
-    this.users = null;
+    this.user = null;
   }
 
   getUser(){
-    return this.users;
+    return this.user;
   }
 
   setUser(user: User){
-    this.users = user;
+    this.user = user;
   }
 }
 
