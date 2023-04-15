@@ -1,15 +1,16 @@
 <template>
-  <div class="container">
-    <div class="logo">
-      <img src="../assets/logo.png" alt="Logo" width="100">
-      <h1>Meu Título</h1>
-    </div>
+  <div class="logo">
+    <img src="../assets/logo.png" alt="Logo" width="200">
+    <h1 class="title">Você está muito próximo de mudar a forma de hospedar seu site</h1>
+    <p>Escolha seu plano</p>
+  </div>
+  <div>
     <div class="card-container">
       <div class="card" v-for="plan in plans" :key="plan.name">
-        <h2>{{plan.name}}</h2>
+        <h2>{{ plan.name }}</h2>
         <h1 v-if="plan.value == 0">Grátis</h1>
         <h1 v-else>R${{ plan.value }}/mês</h1>
-        <p>{{plan.marketing}}</p>
+        <p>{{ plan.marketing }}</p>
         <button>ESCOLHER ESSE PLANO</button>
       </div>
     </div>
@@ -24,9 +25,9 @@ export default defineComponent({
   },
   data() {
     const plans = [
-      {name: "Hospedagem 1", value: 0, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      {name: "Hospedagem 2", value: 499, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      {name: "Hospedagem 3", value: 999, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" }
+      { name: "Hospedagem 1", value: 0, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
+      { name: "Hospedagem 2", value: 499, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
+      { name: "Hospedagem 3", value: 999, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" }
     ]
     return {
       plans: plans,
@@ -44,16 +45,16 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
 }
-
+.title{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  top: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100px;
-  padding-left: 1rem;
+  justify-content: center;
 }
 
 .card-container {
@@ -75,5 +76,4 @@ export default defineComponent({
   max-width: 300px;
   flex: 1 0 auto;
 }
-
 </style>
