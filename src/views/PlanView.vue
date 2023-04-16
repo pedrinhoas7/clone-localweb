@@ -20,25 +20,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
+import Mock from "../../db.json";
 
 export default defineComponent({
-  setup() {
-
-  },
   data() {
     const { params } = useRoute();
-    const plans = [
-      { id: "KAJDHDAJKDJAPO1", name: "Hospedagem 1", value: 0, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      { id: "KAJDHDAJKDJAPO2", name: "Hospedagem 2", value: 499, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      { id: "KAJDHDAJKDJAPO3", name: "Hospedagem 3", value: 999, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" }
-    ]
-    const plan =plans.find(x=> x.id == params.id);
     return{
-      plan: plan
+      plan: Mock.plans.find(x=> x.id == params.id)
     }
-  },
-  methods: {
-  },
+  }
 });
 </script>
 

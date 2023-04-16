@@ -14,24 +14,18 @@
   </div>
 </template>
 
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import vm from '@/views/MainViewModel'
 
 export default defineComponent({
-  setup() {
-
-  },
   data() {
     const user = vm.getUser();
     console.log(user)
     return {
       username: user?.name,
     };
-  },
-  methods: {
-  },
+  }
 });
 </script>
 

@@ -32,21 +32,16 @@ export default defineComponent({
   methods: {
     async submit() {
       try {
-        // fazer a chamada de autenticação aqui
-        // por exemplo, usando uma API
         const response = await api.post('/auth/login', {
           username: this.username,
           password: this.password,
         });
-
-        // se a autenticação foi bem-sucedida, redirecionar para a página inicial
         if (response.status === 200) {
           vm.setUser({token: response.data.token, name: this.username})
           this.$router.push('/watch');
         }
       } catch (error) {
         console.log(error)
-        // se ocorreu um erro na autenticação, exibir uma mensagem de erro
         alert('username ou senha incorretos');
       }
     },

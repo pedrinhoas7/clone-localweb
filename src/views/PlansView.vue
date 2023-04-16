@@ -1,4 +1,5 @@
 <template>
+  <a href="/login">Já tenho conta</a>
   <div class="logo">
     <img src="../assets/logo.png" alt="Logo" width="200">
     <h1 class="title">Você está muito próximo de mudar a forma de hospedar seu site</h1>
@@ -11,40 +12,25 @@
         <h1 v-if="plan.value == 0">Grátis</h1>
         <h1 v-else>R${{ plan.value }}/mês</h1>
         <p>{{ plan.marketing }}</p>
-        <button @click="selectPlan(plan)">ESCOLHER ESSE PLANO</button>
+        <button @click="selectPlan(plan.id)">ESCOLHER ESSE PLANO</button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-interface Plan {
-  id: string;
-  name: string;
-  value: number;
-  description: string;
-  marketing: string;
-}
-
 import { defineComponent } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import Mock from "../../db.json";
 
 export default defineComponent({
-  setup() {
-  },
   data() {
-    const plans = [
-      { id: "KAJDHDAJKDJAPO1", name: "Hospedagem 1", value: 0, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      { id: "KAJDHDAJKDJAPO2", name: "Hospedagem 2", value: 499, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
-      { id: "KAJDHDAJKDJAPO3", name: "Hospedagem 3", value: 999, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" }
-    ];
     return {
-      plans: plans,
+      plans: Mock.plans
     };
   },
   methods: {
-    selectPlan(plan: Plan) {
-      this.$router.replace({ path: '/plan/' + plan.id });
+    selectPlan(id: String) {
+      this.$router.replace({ path: '/plan/' + id });
     }
   }
 });
