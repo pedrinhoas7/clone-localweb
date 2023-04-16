@@ -3,6 +3,7 @@ import { createRouter, createWebHistory, type NavigationGuard } from 'vue-router
 import LoginView from '../views/LoginView.vue';
 import WathStream from '@/views/WathStream.vue';
 import PlansView from '@/views/PlansView.vue';
+import PlanView from '@/views/PlanView.vue';
 import vm from '@/views/MainViewModel';
 const requireAuth: NavigationGuard = (to, from, next) => {
   console.log(vm.getUser())
@@ -17,6 +18,11 @@ const requireAuth: NavigationGuard = (to, from, next) => {
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/plan/:id',
+      name: 'plan',
+      component: PlanView,
+    },
     {
       path: '/',
       name: 'plans',

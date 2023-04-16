@@ -6,63 +6,48 @@
   </div>
   <div>
     <div class="card-container">
-      <div class="card" v-for="plan in plans" :key="plan.id">
-        <h2>{{ plan.name }}</h2>
-        <h1 v-if="plan.value == 0">Grátis</h1>
-        <h1 v-else>R${{ plan.value }}/mês</h1>
-        <p>{{ plan.marketing }}</p>
-        <button @click="selectPlan(plan)">ESCOLHER ESSE PLANO</button>
+      <div class="card">
+        <h2>{{ plan?.name }}</h2>
+        <h1 v-if="plan?.value == 0">Grátis</h1>
+        <h1 v-else>R${{ plan?.value }}/mês</h1>
+        <p>{{ plan?.marketing }}</p>
+        <button @click="$router.replace({name: 'plans'})">Trocar plano</button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-interface Plan {
-  id: string;
-  name: string;
-  value: number;
-  description: string;
-  marketing: string;
-}
-
 import { defineComponent } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
   setup() {
+
   },
   data() {
+    const { params } = useRoute();
     const plans = [
       { id: "KAJDHDAJKDJAPO1", name: "Hospedagem 1", value: 0, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
       { id: "KAJDHDAJKDJAPO2", name: "Hospedagem 2", value: 499, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" },
       { id: "KAJDHDAJKDJAPO3", name: "Hospedagem 3", value: 999, description: "Seu site em Servidores", marketing: "Ideal para quem está começando" }
-    ];
-    return {
-      plans: plans,
-    };
+    ]
+    const plan =plans.find(x=> x.id == params.id);
+    return{
+      plan: plan
+    }
   },
   methods: {
-    selectPlan(plan: Plan) {
-      this.$router.replace({ path: '/plan/' + plan.id });
-    }
-  }
+  },
 });
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.title {
+.title{
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .logo {
   top: 100px;
   display: flex;
