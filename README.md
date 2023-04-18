@@ -31,8 +31,6 @@
 | Vercel         | ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)                    |
 
 
-# Layout:
+# Figma ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) :
 - https://www.figma.com/proto/AGBeuyCnaldE4AMJjTuuOp/Cadastro?node-id=6-3342&starting-point-node-id=6%3A3342
 
-# Example:
-![image](https://user-images.githubusercontent.com/50623914/232834238-f167fb39-ea3a-4457-80e1-18ee9e3786ee.png)
