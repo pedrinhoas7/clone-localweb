@@ -19,16 +19,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/plan/:id',
-      name: 'plan',
-      component: PlanView,
-    },
-    {
-      path: '/',
-      name: 'plans',
-      component: PlansView,
-    },
-    {
       path: '/login',
       name: 'login',
       component: LoginView
@@ -38,6 +28,16 @@ const router = createRouter({
       name: 'watch',
       component: WathStream,
       beforeEnter: requireAuth
+    },
+    {
+      path: '/plan/:id',
+      name: 'plan',
+      component: PlanView,
+    },
+    {
+      path: '/',
+      name: 'plans',
+      component: PlansView,
     }
   ]
 })
