@@ -1,18 +1,20 @@
 <template #default>
+  <div class="logo">
+    <img src="../assets/logo.png" alt="Logo" width="150">
+  </div>
   <div class="container">
     <div>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="200" height="40" />
       <div class="card">
         <h2>Entre na sua conta</h2>
         <h3>Para acessar sua conta informe seu e-mail e senha</h3>
         <label>E-mail</label>
-        <input class="input" placeholder="Seu e-mail" type="username" v-model="username" required/>
+        <input class="input" placeholder="Seu e-mail" type="username" v-model="username" required />
         <label>Senha</label>
-        <input class="input" placeholder="Sua senha"  type="password" v-model="password" required/>
+        <input class="input" placeholder="Sua senha" type="password" v-model="password" required />
         <a>Esqueci minha senha</a>
         <button @click="submit">FAZER LOGIN</button>
       </div>
-      <p class="link">Ainda não tem conta?<a>Cadastre-se</a></p>
+      <p class="link">Ainda não tem conta? <span>Cadastre-se</span></p>
     </div>
   </div>
 </template>
@@ -37,7 +39,7 @@ export default defineComponent({
           password: this.password,
         });
         if (response.status === 200) {
-          vm.setUser({token: response.data.token, name: this.username})
+          vm.setUser({ token: response.data.token, name: this.username })
           this.$router.push('/watch');
         }
       } catch (error) {
@@ -50,11 +52,30 @@ export default defineComponent({
 </script>
 
 <style>
+h2{
+  font-weight: bold;
+}
+h3{
+  margin-bottom: 5px;
+}
+.logo {
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+p{
+  text-align: center;
+  margin-top: 10px;
+}
+
 .container {
-  margin-left: 30%;
-  margin-top: 10%;
-  width: 200px;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  position: static;
+  padding-top: 130px;
   justify-content: center;
 }
 
@@ -63,6 +84,8 @@ export default defineComponent({
   width: 500px;
   display: inline-block;
   border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 5px;
 }
 
 .input {
@@ -72,6 +95,10 @@ export default defineComponent({
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 5px;
+}
+span{
+  color: #ff1861;
+  text-decoration: underline
 }
 
 button {

@@ -5,21 +5,81 @@
       "name": "Hospedagem 1",
       "value": 0,
       "description": "Seu site em Servidores",
-      "marketing": "Ideal para quem está começando"
+      "addictionalInfo": ["Você não paga nada para usar", "sem taxa de setup"],
+      "ideal": "Ideal para quem está começando",
+      "ranking": false,
+      "servers": [
+        "Servidores em nosso data center americanos", 
+        "ASP, APS.NET 2.0/3.0/3.5/ e 4.0/4.5/4.5.1/4.5.2 (medium trust) ou PHP 5.3, 5.4, 5.5, 5.6 e 7.0;",
+        "1 usuário de FTP para upload ou download;",
+        "1 conta de e-mail profissionais;",
+        "1 subdominio gratuito;"
+      ],
+      "support": "Suporte 24 horas, 7 dias por semana grátis",
+      "apps": ["Wordpress", "Drupal", "entre outros..."],
+      "migrations": false,
+      "addictionalServices": [
+        "Webmail RoundCube", 
+        "AntiSpan", 
+        "Painel de gerenciamento de DNS", 
+        "Painel de controle web", 
+        "Configurações de PHP personalizáveis", 
+        "Certificado SSL grátis", 
+        "Transferencia ilimitada"]
     },
     {
       "id": "KAJDHDAJKDJAPO2",
       "name": "Hospedagem 2",
       "value": 499,
       "description": "Seu site em Servidores",
-      "marketing": "Ideal para quem está começando"
+      "addictionalInfo": ["Cobrado mensalmente", "sem taxa de setup"],
+      "ideal": "Ideal para site com mais de 30k de visitas.",
+      "ranking": true,
+      "servers": [
+        "Servidores em nosso data center americanos", 
+        "ASP, APS.NET 2.0/3.0/3.5/ e 4.0/4.5/4.5.1/4.5.2 (medium trust) ou PHP 5.3, 5.4, 5.5, 5.6 e 7.0;",
+        "1 usuário de FTP para upload ou download;",
+        "1 conta de e-mail profissionais;",
+        "1 subdominio gratuito;"
+      ],
+      "support": "Suporte 24 horas, 7 dias por semana grátis",
+      "apps": ["Wordpress", "Drupal", "entre outros..."],
+      "migrations": true,
+      "addictionalServices": [
+        "Webmail RoundCube", 
+        "AntiSpan", 
+        "Painel de gerenciamento de DNS", 
+        "Painel de controle web", 
+        "Configurações de PHP personalizáveis", 
+        "Certificado SSL grátis", 
+        "Transferencia ilimitada"]
     },
     {
       "id": "KAJDHDAJKDJAPO3",
       "name": "Hospedagem 3",
       "value": 999,
       "description": "Seu site em Servidores",
-      "marketing": "Ideal para quem está começando"
+      "addictionalInfo": ["Cobrado mensalmente", "sem taxa de setup"],
+      "ideal": "Ideal para site com mais de 60k de visitas.",
+      "ranking": false,
+      "servers": [
+        "Servidores em nosso data center americanos", 
+        "ASP, APS.NET 2.0/3.0/3.5/ e 4.0/4.5/4.5.1/4.5.2 (medium trust) ou PHP 5.3, 5.4, 5.5, 5.6 e 7.0;",
+        "1 usuário de FTP para upload ou download;",
+        "1 conta de e-mail profissionais;",
+        "1 subdominio gratuito;"
+      ],
+      "support": "Suporte 24 horas, 7 dias por semana grátis",
+      "apps": ["Wordpress", "Drupal", "entre outros..."],
+      "migrations": true,
+      "addictionalServices": [
+        "Webmail RoundCube", 
+        "AntiSpan", 
+        "Painel de gerenciamento de DNS", 
+        "Painel de controle web", 
+        "Configurações de PHP personalizáveis", 
+        "Certificado SSL grátis", 
+        "Transferencia ilimitada"]
     }
   ]
 }
