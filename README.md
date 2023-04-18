@@ -1,7 +1,7 @@
 
 # Deploy ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
- -https://clone-localweb.vercel.app/
- -login:  `{
+ - https://clone-localweb.vercel.app/
+ - login:  `{
   username: david_r
   password: 3478*#54
  }`
