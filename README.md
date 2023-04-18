@@ -1,23 +1,18 @@
-![image](https://user-images.githubusercontent.com/50623914/232834238-f167fb39-ea3a-4457-80e1-18ee9e3786ee.png)
 
-# Deploy
+# ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) Deploy
  https://clone-localweb.vercel.app/
-
-# Credentials 
- `{
+ login:  `{
   username: david_r
   password: 3478*#54
  }`
 
-
 # API: 
  consumer https://fakestoreapi.com/
 
-
-# Usage
- git clone https://github.com/pedrinhoas7/clone-localweb
- npm install
- npm run dev
+# ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) Usage
+ `git clone https://github.com/pedrinhoas7/clone-localweb`
+ `npm install`
+ `npm run dev`
 
 ### 📋 Languages
 | Name          | Badge                                                                                                                                                                                                                                                   |
@@ -34,3 +29,7 @@
 | Name          | Badge                                                                                                                                                                                                                                                     |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Vercel         | ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)                    |
+
+
+
+![image](https://user-images.githubusercontent.com/50623914/232834238-f167fb39-ea3a-4457-80e1-18ee9e3786ee.png)
